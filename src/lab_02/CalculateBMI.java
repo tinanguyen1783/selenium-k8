@@ -34,12 +34,11 @@ public class CalculateBMI {
         bmi = weightUser / (heightUser * heightUser);
         System.out.println("Your BMI is " + String.format("%.2f", bmi));
 
- //       Bonus
+        //       Bonus
 //        Underweight = <18.5
 //        Normal weight = 18.5 – 24.9
 //        Overweight = 25–29.9
 //        Obesity = BMI of 30 or greater
-
 
 
         float weightChange;

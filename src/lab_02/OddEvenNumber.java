@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class OddEvenNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        float numberInput = 0;
+        float numberInput ;
 
         System.out.println("Please input a number.");
         try {
