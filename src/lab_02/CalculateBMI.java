@@ -8,33 +8,14 @@ public class CalculateBMI {
         float heightUser, weightUser, bmi;
 
         System.out.println("Please input your height(m)");
-        while (true) {
-            try {
-                heightUser = scanner.nextFloat();
-                if (heightUser > 0 && heightUser <= 3) break;
-                System.out.println("Height should be > 0 and < =3 (m). Please re-input your height (m).");
-            } catch (java.util.InputMismatchException e) {
-                System.out.println("Height should be a number. Please re-input your height (m).");
-                scanner.next();
-            }
-        }
+        heightUser = scanner.nextFloat();
 
         System.out.println("Please input your weight (kg)");
-        while (true) {
-            try {
-                weightUser = scanner.nextFloat();
-                if (weightUser > 0) break;
-                System.out.println("Weight should be > 0 . Please re-input your weight (kg).");
-            } catch (java.util.InputMismatchException e) {
-                System.out.println("Weight should be a number. Please re-input your weight (kg).");
-                scanner.next();
-            }
-        }
+        weightUser = scanner.nextFloat();
 
         bmi = weightUser / (heightUser * heightUser);
         System.out.println("Your BMI is " + String.format("%.2f", bmi));
 
-        //       Bonus
 //        Underweight = <18.5
 //        Normal weight = 18.5 – 24.9
 //        Overweight = 25–29.9
