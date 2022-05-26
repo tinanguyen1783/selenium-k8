@@ -2,8 +2,9 @@ package lab_02;
 
 import java.util.Scanner;
 
-public class CalculateBMI {
+public class BMICalculation {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         float heightUser, weightUser, bmi;
 
@@ -24,11 +25,11 @@ public class CalculateBMI {
 
         float weightChange;
         if (bmi < 18.5) {
-            weightChange = (float) (18.5 * (heightUser * heightUser)) - weightUser;
+            weightChange =  (18.5f * (heightUser * heightUser)) - weightUser;
             System.out.println("Underweight. You should increase " + weightChange + "(kg)");
-        } else if (bmi <= 24.9) System.out.println("Normal weight.");
+        } else if (bmi <= 24.9f) System.out.println("Normal weight.");
         else {
-            weightChange = weightUser - (float) (24.9 * (heightUser * heightUser));
+            weightChange = weightUser - (float) (24.9f * (heightUser * heightUser));
             if (bmi <= 29.9) System.out.println("Overweight");
             else System.out.println("Obesity");
             System.out.println("You should decrease " + String.format("%.2f", weightChange) + "(kg)");
