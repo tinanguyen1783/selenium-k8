@@ -15,36 +15,30 @@ public class ArrayMergeSort {
 
     public static void main(String[] args) {
 
-        int i, j, arrayLength1, arrayLength2, tmp;
+        int i, j, arrayLength1, arrayLength2, arrayLength3, tmp;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please input element number of the array 01: ");
-        arrayLength1 = scanner.nextInt();
+        int[] array1 = { 1, 12, 16, 28, 34 };
+        int[] array2 = { 1, 13, 16, 27, 99 };
 
-        System.out.println("Please input element number of the array 02: ");
-        arrayLength2 = scanner.nextInt();
+        arrayLength1 = array1.length;
+        arrayLength2 = array2.length;
+        arrayLength3 = array1.length + array2.length;
 
-        int arrayLength3 = arrayLength1 + arrayLength2;
-        int[] array1 = new int[arrayLength1];
-        int[] array2 = new int[arrayLength2];
-        int[] array3 = new int[arrayLength1 + arrayLength2];
+        int[] array3 = new int[arrayLength3];
 
-        System.out.print("Your array 01 (random) is : ");
-
-        //Create element for array 01 with random number. Add element from array 01 to array 03
+        System.out.print("\nArray 01 is : ");
+        // Add element from array 01 to array 03
         for (i = 0; i < arrayLength1; i++) {
-            array1[i] = new SecureRandom().nextInt(100);
             System.out.print(array1[i] + "  ");
             array3[i] = array1[i];
 
         }
 
-        System.out.print("\nYour array 02 (random) is : ");
+        System.out.print("\nArray 02 is : ");
 
-        //Create element for array 01 with random number. Add element from array 02 to array 03
+        //Add element from array 02 to array 03
 
         for (i = 0; i < arrayLength2; i++) {
-            array2[i] = new SecureRandom().nextInt(100);
             System.out.print(array2[i] + "  ");
             array3[arrayLength1 + i] = array2[i];
 
@@ -62,7 +56,7 @@ public class ArrayMergeSort {
 
         }
 
-        System.out.println("\nYour array after merging - sorting");
+        System.out.println("\nArray after merging - sorting");
 
         for (int elementValue : array3) {
             System.out.print(elementValue + "  ");
