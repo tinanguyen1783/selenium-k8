@@ -11,7 +11,7 @@ int[] intArr = {1, 2, 3, 4, 5};
 Minimum: 1
 Maximum: 5
 */
-public class ArrayMinMaxCalculation {
+public class ArrayMinMaxFinding {
 
     public static void main(String[] args) {
 
@@ -23,13 +23,15 @@ public class ArrayMinMaxCalculation {
 
         int[] array = new int[arrayLength];
 
-        System.out.print("Your array(random) is : ");
+        System.out.print("Array(random) is : { ");
 
 
         //Create element for array with random number.
         for (index = 0; index < arrayLength; index++) {
             array[index] = new SecureRandom().nextInt(100);
-            System.out.print(array[index] + " ");
+            System.out.print(array[index]);
+            if (index < (arrayLength - 1)) System.out.print(", ");
+            else System.out.println(" }\n");
         }
 
         min = array[0];
@@ -43,7 +45,7 @@ public class ArrayMinMaxCalculation {
 
         }
 
-        System.out.println("\nMin number:" + min);
+        System.out.println("Min number:" + min);
         System.out.println("Max number:" + max);
 
 

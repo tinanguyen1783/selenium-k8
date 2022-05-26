@@ -23,13 +23,16 @@ public class ArrayOddEvenCalculation {
 
         int[] array = new int[arrayLength];
 
-        System.out.print("Your array(random) is : ");
+        System.out.print("Array(random) is: {");
 
         //Create element for array with random number. Count odd and even.
         for (index = 0; index < arrayLength; index++) {
 
             array[index] = new SecureRandom().nextInt(100);
-            System.out.print(array[index] + " ");
+            System.out.print(array[index]);
+            if (index < (arrayLength - 1)) System.out.print(", ");
+            else System.out.println(" }\n");
+
             if (array[index] % 2 == 0) even++;
             else odd++;
 

@@ -1,7 +1,5 @@
 package lab_03;
 
-import java.security.SecureRandom;
-import java.util.Scanner;
 /*
 Merge 2 SORTED integer array into one SORTED array
 
@@ -11,13 +9,13 @@ Array 02: {1, 13, 16, 27, 99}
 Expected output: {1, 1, 12, 13, 16, 16, 27, 28, 34, 99}
  */
 
-public class ArrayMergeSort {
+public class ArrayMergeSortInc {
 
     public static void main(String[] args) {
 
         int i, j, arrayLength1, arrayLength2, arrayLength3, tmp;
 
-        int[] array1 = { 1, 12, 16, 28, 34 };
+        int[] array1 = { 1, 12, 16, 28, 34,9,90 };
         int[] array2 = { 1, 13, 16, 27, 99 };
 
         arrayLength1 = array1.length;
