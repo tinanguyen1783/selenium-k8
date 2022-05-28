@@ -55,13 +55,13 @@ public class ArrayListLearning {
 
     public static List<Integer> createArrayList() {
 
-        System.out.println("Please input element number of the ArrayList: ");
+        int arrayLength, random;
         Scanner scanner = new Scanner(System.in);
-        int arrayLength;
+        List<Integer> myList = new ArrayList<>();
+
+        System.out.println("Please input element number of the ArrayList: ");
         arrayLength = scanner.nextInt();
 
-        List<Integer> myList = new ArrayList<>();
-        int random;
         System.out.print("ArrayList (random) is created: { ");
         for (int i = 0; i < arrayLength; i++) {
             random = new SecureRandom().nextInt(1000);
@@ -79,13 +79,12 @@ public class ArrayListLearning {
 
         System.out.print("ArrayList: ");
         for (Integer integer : myArrList) {
-
             System.out.print(integer + " ");
-
         }
     }
 
     public static int findMax(List<Integer> arr) {
+
         int max;
         max = arr.get(0);
         for (int elementValue : arr) {
@@ -96,6 +95,7 @@ public class ArrayListLearning {
     }
 
     public static int findMin(List<Integer> arr) {
+
         int min;
         min = arr.get(0);
         for (int elementValue : arr) {
@@ -108,18 +108,21 @@ public class ArrayListLearning {
     public static void searchNumber(List<Integer> arr) {
 
         Scanner scanner = new Scanner(System.in);
-        int number;
+        int numberInput, count = 0;
         System.out.println("Please input the number which you want to search: ");
-        number = scanner.nextInt();
-        int count = 0;
+        numberInput = scanner.nextInt();
         List<Integer> positionList = new ArrayList<>();
         for (int i = 0; i < arr.size(); i++) {
-            if (arr.get(i) == number) {
+
+            if (arr.get(i) == numberInput) {
+
                 positionList.add(count, i);
                 count++;
+
             }
 
         }
+
         if (count == 0) System.out.println("Your number doesn't exist in ArrayList");
         else {
             System.out.printf("Your number exists in ArrayList %d time(s) at the index: ", count);
