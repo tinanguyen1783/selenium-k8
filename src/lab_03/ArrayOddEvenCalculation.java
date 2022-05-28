@@ -15,25 +15,18 @@ public class ArrayOddEvenCalculation {
 
     public static void main(String[] args) {
 
-        int index, arrayLength, odd = 0, even = 0;
+        int arrayLength, odd = 0, even = 0;
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please input element number of the array: ");
         arrayLength = scanner.nextInt();
 
-        int[] array = new int[arrayLength];
+        int[] array ;
 
-        System.out.print("Array(random) is: {");
+        array = createArray(arrayLength);
 
-        //Create element for array with random number. Count odd and even.
-        for (index = 0; index < arrayLength; index++) {
-
-            array[index] = new SecureRandom().nextInt(100);
-            System.out.print(array[index]);
-            if (index < (arrayLength - 1)) System.out.print(", ");
-            else System.out.println(" }\n");
-
-            if (array[index] % 2 == 0) even++;
+        for (int i : array) {
+            if (i % 2 == 0) even++;
             else odd++;
 
         }
@@ -43,4 +36,21 @@ public class ArrayOddEvenCalculation {
 
 
     }
+
+    public static int[] createArray(int num) {
+        int[] array = new int[num];
+
+        System.out.print("Array(random) is : { ");
+        for (int i = 0; i < num; i++) {
+            array[i] = new SecureRandom().nextInt(100);
+            System.out.print(array[i]);
+            if (i < num - 1) System.out.print(",  ");
+            else System.out.print(" }\n");
+
+        }
+        return array;
+
+    }
+
+
 }

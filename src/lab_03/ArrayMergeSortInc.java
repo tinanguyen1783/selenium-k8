@@ -15,8 +15,8 @@ public class ArrayMergeSortInc {
 
         int i, j, arrayLength1, arrayLength2, arrayLength3, tmp;
 
-        int[] array1 = { 1, 12, 16, 28, 34,9,90 };
-        int[] array2 = { 1, 13, 16, 27, 99 };
+        int[] array1 = {1, 12, 16, 28, 34, 9, 90};
+        int[] array2 = {1, 13, 16, 27, 99};
 
         arrayLength1 = array1.length;
         arrayLength2 = array2.length;

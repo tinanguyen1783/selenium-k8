@@ -20,30 +20,11 @@ public class ArraySortInc {
         System.out.println("Please input element number of the array: ");
         arrayLength = scanner.nextInt();
 
-        int[] array = new int[arrayLength];
+        int[] array;
 
-        System.out.print("Array(random) is: { ");
+        array = createArray(arrayLength);
 
-        //Create element for array with random number.
-        for (i = 0; i < arrayLength; i++) {
-            array[i] = new SecureRandom().nextInt(100);
-            System.out.print(array[i]);
-            if (i < (arrayLength - 1)) System.out.print(", ");
-            else System.out.println(" }\n");
-        }
-
-        //Sort array.
-        for (i = 0; i < arrayLength - 1; i++) {
-            for (j = i + 1; j < arrayLength; j++) {
-                if (array[i] > array[j]) {
-                    tmp = array[i];
-                    array[i] = array[j];
-                    array[j] = tmp;
-                }
-            }
-
-        }
-
+        array = sortInc(array);
         System.out.print("\nYour array after sorting: ");
 
         for (int elementValue : array) {
@@ -53,4 +34,35 @@ public class ArraySortInc {
 
 
     }
+
+    public static int[] createArray(int num) {
+
+        System.out.print("Array(random) is: { ");
+        int[] array = new int[num];
+        //Create element for array with random number.
+        for (int i = 0; i < num; i++) {
+            array[i] = new SecureRandom().nextInt(100);
+            System.out.print(array[i]);
+            if (i < (num - 1)) System.out.print(", ");
+            else System.out.println(" }\n");
+        }
+        return array;
+
+    }
+
+    public static int[] sortInc(int[] arr) {
+        int tmp;
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+
+        }
+        return arr;
+    }
+
 }
