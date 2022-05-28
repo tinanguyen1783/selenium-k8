@@ -9,37 +9,45 @@ public class ArrayListLearning {
 
     public static void main(String[] args) {
 
-        int  option;
-        List<Integer> arrList ;
+        int option;
+        List<Integer> arrList;
         arrList = createArrayList();
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("=====MENU======\n" +
                 "1. Print all numbers\n" +
                 "2. Print maximum value\n" +
                 "3. Print minimum value\n" +
                 "4. Search number");
-        System.out.println("Please input your option(1->4)");
 
-        Scanner scanner = new Scanner(System.in);
-        option = scanner.nextInt();
 
-        switch (option) {
+        while (true) {
 
-            case 1:
-                printArrayList(arrList);
-                break;
-            case 2:
-                System.out.println("Max number: " + findMax(arrList));
-                break;
-            case 3:
-                System.out.println("Min number: " + findMin(arrList));
-                break;
-            case 4:
-                searchNumber(arrList);
-                break;
-            default:
-                System.out.println("You have input the number 1- > 4");
+            System.out.println("\nPlease input your option(1->4)");
 
+            option = scanner.nextInt();
+
+            if (option < 1 || option > 4) {
+                System.out.println("You have input the option 1- > 4. See you later.");
+                return;
+            }
+
+            switch (option) {
+
+                case 1:
+                    printArrayList(arrList);
+                    break;
+                case 2:
+                    System.out.println("Max number: " + findMax(arrList));
+                    break;
+                case 3:
+                    System.out.println("Min number: " + findMin(arrList));
+                    break;
+                case 4:
+                    searchNumber(arrList);
+                    break;
+
+            }
         }
 
 
