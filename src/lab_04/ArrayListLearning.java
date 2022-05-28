@@ -9,14 +9,9 @@ public class ArrayListLearning {
 
     public static void main(String[] args) {
 
-        int arrayLength, option;
-
+        int  option;
         List<Integer> arrList ;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please input element number of the ArrayList: ");
-        arrayLength = scanner.nextInt();
-
-        arrList = createArrayList(arrayLength);
+        arrList = createArrayList();
 
         System.out.println("=====MENU======\n" +
                 "1. Print all numbers\n" +
@@ -24,6 +19,8 @@ public class ArrayListLearning {
                 "3. Print minimum value\n" +
                 "4. Search number");
         System.out.println("Please input your option(1->4)");
+
+        Scanner scanner = new Scanner(System.in);
         option = scanner.nextInt();
 
         switch (option) {
@@ -48,16 +45,21 @@ public class ArrayListLearning {
 
     }
 
-    public static List<Integer> createArrayList(int num) {
+    public static List<Integer> createArrayList() {
+
+        System.out.println("Please input element number of the ArrayList: ");
+        Scanner scanner = new Scanner(System.in);
+        int arrayLength;
+        arrayLength = scanner.nextInt();
 
         List<Integer> myList = new ArrayList<>();
         int random;
         System.out.print("ArrayList (random) is created: { ");
-        for (int i = 0; i < num; i++) {
+        for (int i = 0; i < arrayLength; i++) {
             random = new SecureRandom().nextInt(1000);
             myList.add(i, random);
             System.out.print(myList.get(i));
-            if (i < num - 1) System.out.print(",  ");
+            if (i < arrayLength - 1) System.out.print(",  ");
             else System.out.print(" }\n");
 
         }
@@ -97,10 +99,10 @@ public class ArrayListLearning {
 
     public static void searchNumber(List<Integer> arr) {
 
-        Scanner scaner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int number;
         System.out.println("Please input the number which you want to search: ");
-        number = scaner.nextInt();
+        number = scanner.nextInt();
         int count = 0;
         List<Integer> positionList = new ArrayList<>();
         for (int i = 0; i < arr.size(); i++) {
