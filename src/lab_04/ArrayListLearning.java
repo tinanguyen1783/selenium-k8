@@ -54,7 +54,7 @@ public class ArrayListLearning {
         int random;
         System.out.print("ArrayList (random) is created: { ");
         for (int i = 0; i < num; i++) {
-            random = new SecureRandom().nextInt(10);
+            random = new SecureRandom().nextInt(1000);
             myList.add(i, random);
             System.out.print(myList.get(i));
             if (i < num - 1) System.out.print(",  ");
