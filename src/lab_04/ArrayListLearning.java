@@ -122,7 +122,7 @@ public class ArrayListLearning {
         }
         if (count == 0) System.out.println("Your number doesn't exist in ArrayList");
         else {
-            System.out.print("Your number exists in ArrayList at the index: ");
+            System.out.printf("Your number exists in ArrayList %d time(s) at the index: ", count);
             for (Integer integer : positionList) {
                 System.out.print(integer + "  ");
 
