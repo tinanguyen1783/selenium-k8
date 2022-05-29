@@ -10,6 +10,7 @@ public class ArrayListLearning {
     public static void main(String[] args) {
 
         int option;
+        boolean isContinue = true;
         List<Integer> arrList;
         arrList = createArrayList();
         Scanner scanner = new Scanner(System.in);
@@ -21,18 +22,13 @@ public class ArrayListLearning {
                 "4. Search number");
 
 
-        while (true) {
+        while (isContinue) {
 
             System.out.println("\nPlease input your option(1->4)");
 
             option = scanner.nextInt();
 
-            if (option < 1 || option > 4) {
-                System.out.println("You have input the option 1- > 4. See you later.");
-                return;
-            }
-
-            switch (option) {
+             switch (option) {
 
                 case 1:
                     printArrayList(arrList);
@@ -46,6 +42,9 @@ public class ArrayListLearning {
                 case 4:
                     searchNumber(arrList);
                     break;
+                default:
+                    System.out.println("You have input the option 1- > 4. See you later.");
+                    isContinue = false;
 
             }
         }
