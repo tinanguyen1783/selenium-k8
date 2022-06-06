@@ -22,19 +22,36 @@ public class StringMethods {
 
     }
 
-    public String getPasswordInput() {
+    public void checkPassword(String password) {
 
         Scanner scanner = new Scanner(System.in);
-        return scanner.next();
+
+        String passdUserInput;
+        System.out.println("Please input your password.");
+        int i = 3;
+        while (i > 0) {
+            passdUserInput = scanner.next();
+            if (passdUserInput.equals(password)) {
+                System.out.println("Login successful. ");
+                return;
+            }
+            i--;
+            if (i != 0) System.out.println("Please re-input your password.");
+
+        }
+
+        if (i == 0) System.out.println("Your account is blocked.");
+        return;
+
     }
 
     public List<Integer> getNumber(String str) {
 
-        char[] arraystr = str.toCharArray();
+        char[] arrayStr = str.toCharArray();
         List<Integer> arrayNum = new ArrayList<>();
 
         int i = 0;
-        for (char c : arraystr) {
+        for (char c : arrayStr) {
 
             if (Character.isDigit(c)) arrayNum.add(getNumericValue(c));
 
