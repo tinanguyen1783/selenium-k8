@@ -10,13 +10,13 @@ public class StringMethods {
 
     public void printTotalMinutes(String str) {
 
-        String[] arraystr;
-        arraystr = str.split(" and ");
+        String[] arrayStr;
+        arrayStr = str.split(" and ");
 
-        arraystr[0] = arraystr[0].replaceAll("[^0-9.]", "");
-        arraystr[1] = arraystr[1].replaceAll("[^0-9.]", "");
+        arrayStr[0] = arrayStr[0].replaceAll("[^0-9.]", "");
+        arrayStr[1] = arrayStr[1].replaceAll("[^0-9.]", "");
 
-        int total = (Integer.valueOf(arraystr[0]) * 60) + Integer.valueOf(arraystr[1]);
+        int total = (Integer.valueOf(arrayStr[0]) * 60) + Integer.valueOf(arrayStr[1]);
 
         System.out.println("The minutes in total are " + total);
 
@@ -28,19 +28,19 @@ public class StringMethods {
 
         String passdUserInput;
         System.out.println("Please input your password.");
-        int i = 3;
-        while (i > 0) {
+        int time = 3;
+        while (time > 0) {
             passdUserInput = scanner.next();
             if (passdUserInput.equals(password)) {
                 System.out.println("Login successful. ");
                 return;
             }
-            i--;
-            if (i != 0) System.out.println("Please re-input your password.");
+            time--;
+            if (time != 0) System.out.println("Please re-input your password.");
 
         }
 
-        if (i == 0) System.out.println("Your account is blocked.");
+        if (time == 0) System.out.println("Your account is blocked.");
         return;
 
     }
