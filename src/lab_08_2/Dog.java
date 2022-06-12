@@ -6,7 +6,6 @@ public class Dog extends Animal {
 
     public Dog() {
         this.speed = this.speed();
-        this.name = "Dog";
     }
 
     @Override

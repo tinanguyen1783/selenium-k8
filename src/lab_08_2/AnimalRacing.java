@@ -5,35 +5,37 @@ import java.util.List;
 
 public class AnimalRacing {
 
+    public Animal getAnimalWin(List<Animal> animalList) {
+        Animal winAnimal = animalList.get(0);
+        for (Animal animal : animalList) {
+
+            if (winAnimal.getSpeed() < animal.getSpeed()) winAnimal = animal;
+        }
+        return winAnimal;
+    }
+
     public static void main(String[] args) {
 
         int maxSpeed;
         String nameAnimal;
-
         Animal dog = new Dog();
         Animal horse = new Horse();
         Animal tiger = new Tiger();
+        List<Animal> animalList = new ArrayList<>();
+        Animal animalWin = new Animal();
+        animalList.add(dog);
+        animalList.add(horse);
+        animalList.add(tiger);
 
-        System.out.println("Racing start:");
-        System.out.println("Dog speed " + dog.getSpeed() + " Km/h");
-        System.out.println("Horse speed " + horse.getSpeed() + " Km/h");
-        System.out.println("Tiger speed " + tiger.getSpeed() + " Km/h");
+        animalWin = new AnimalRacing().getAnimalWin(animalList);
+        for (Animal animal : animalList) {
 
-        if (dog.getSpeed() > horse.getSpeed()) {
-            maxSpeed = dog.getSpeed();
-            nameAnimal = dog.getName();
+            System.out.printf("%s speed: %d\n", animal.getClass().getSimpleName(), animal.getSpeed());
 
-        } else {
-            maxSpeed = horse.getSpeed();
-            nameAnimal = horse.getName();
         }
 
-        if (maxSpeed < tiger.getSpeed()) {
-            maxSpeed = tiger.getSpeed();
-            nameAnimal = tiger.getName();
-        }
-        System.out.println("Winner is " + nameAnimal + " with speed: " + maxSpeed + " Km/h");
+        System.out.printf("Winner is %s, with speed: %d", animalWin.getClass().getSimpleName(), animalWin.getSpeed());
+
 
     }
-
 }

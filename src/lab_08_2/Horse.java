@@ -5,7 +5,6 @@ import java.security.SecureRandom;
 public class Horse extends Animal {
     public Horse() {
         this.speed = this.speed();
-        this.name = "Horse";
     }
 
     @Override
