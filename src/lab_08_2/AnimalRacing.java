@@ -34,7 +34,7 @@ public class AnimalRacing {
 
         }
 
-        System.out.printf("Winner is %s, with speed: %d", animalWin.getClass().getSimpleName(), animalWin.getSpeed());
+        System.out.printf("Winner is %s, with speed: %d Km/h", animalWin.getClass().getSimpleName(), animalWin.getSpeed());
 
 
     }

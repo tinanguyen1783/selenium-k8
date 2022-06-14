@@ -40,7 +40,7 @@ public class EmployeeSalaryCalculation {
             employees.add(partTimeEmployee);
         }
 
-        System.out.println(" Total Salary: " +new EmployeeSalaryCalculation().salaryCalculation(employees));
+        System.out.println(" Total Salary: " + new EmployeeSalaryCalculation().salaryCalculation(employees));
 
     }
 
