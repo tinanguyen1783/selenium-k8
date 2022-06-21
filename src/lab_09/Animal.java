@@ -6,7 +6,7 @@ public class Animal {
     private int animalSpeed = 0;
     private boolean isWing = true;
 
-    public Animal(Builder builder) {
+    protected Animal(Builder builder) {
 
         animalName = builder.animalName;
         animalSpeed = builder.animalSpeed;
