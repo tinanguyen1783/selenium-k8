@@ -15,20 +15,19 @@ public class ArrayListLearning {
         arrList = createArrayList();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("=====MENU======\n" +
-                "1. Print all numbers\n" +
-                "2. Print maximum value\n" +
-                "3. Print minimum value\n" +
-                "4. Search number");
-
-
         while (isContinue) {
+
+            System.out.println("\n=====MENU======\n" +
+                    "1. Print all numbers\n" +
+                    "2. Print maximum value\n" +
+                    "3. Print minimum value\n" +
+                    "4. Search number");
 
             System.out.println("\nPlease input your option(1->4)");
 
             option = scanner.nextInt();
 
-             switch (option) {
+            switch (option) {
 
                 case 1:
                     printArrayList(arrList);
