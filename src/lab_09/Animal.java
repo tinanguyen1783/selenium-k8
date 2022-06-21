@@ -6,11 +6,11 @@ public class Animal {
     private int animalSpeed = 0;
     private boolean isWing = true;
 
-    public Animal(Buider buider) {
+    public Animal(Builder builder) {
 
-        animalName = buider.animalName;
-        animalSpeed = buider.animalSpeed;
-        isWing = buider.isWing;
+        animalName = builder.animalName;
+        animalSpeed = builder.animalSpeed;
+        isWing = builder.isWing;
 
     }
 
@@ -26,23 +26,23 @@ public class Animal {
         return isWing;
     }
 
-    public static class Buider {
+    public static class Builder {
 
         private String animalName = "";
         private int animalSpeed = 0;
         private boolean isWing = true;
 
-        public Buider setAnimalName(String animalName) {
+        public Builder setAnimalName(String animalName) {
             this.animalName = animalName;
             return this;
         }
 
-        public Buider setAnimalSpeed(int animalSpeed) {
+        public Builder setAnimalSpeed(int animalSpeed) {
             this.animalSpeed = animalSpeed;
             return this;
         }
 
-        public Buider setisWing(boolean isWing) {
+        public Builder setisWing(boolean isWing) {
             this.isWing = isWing;
             return this;
         }
