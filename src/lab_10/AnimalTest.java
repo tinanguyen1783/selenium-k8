@@ -1,11 +1,11 @@
 package lab_10;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class AnimalRacing {
+public class AnimalTest {
 
     public void getAnimalWin(List<Animal> animalList) {
 
@@ -65,8 +65,8 @@ public class AnimalRacing {
 
     public static void main(String[] args) {
 
-        AnimalRacing animalRacingBonus = new AnimalRacing();
-        animalRacingBonus.getAnimalWin(setAnimalList());
+        AnimalTest animalRacing = new AnimalTest();
+        animalRacing.getAnimalWin(setAnimalList());
 
     }
 
