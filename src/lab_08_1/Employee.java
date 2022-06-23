@@ -6,6 +6,7 @@ public class Employee {
 
     public Employee() {
     }
+
     public int getSalary() {
         return salary;
     }

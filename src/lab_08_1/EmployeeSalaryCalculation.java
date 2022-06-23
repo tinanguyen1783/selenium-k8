@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class EmployeeSalaryCalculation {
 
-    public int salaryCalculation(List<Employee> employeeList) {
+    public static int salaryCalculation(List<Employee> employeeList) {
 
         int totalSalary = 0;
         for (Employee e : employeeList) {
@@ -15,7 +15,7 @@ public class EmployeeSalaryCalculation {
         return totalSalary;
     }
 
-    public static void main(String[] args) {
+    public static List<Employee> setEmployeeList() {
 
         int totalFullTimeEmployee, totalPartTimeEmployee;
 
@@ -26,6 +26,7 @@ public class EmployeeSalaryCalculation {
 
         System.out.print("Please input the total part-time employee: ");
         totalPartTimeEmployee = scanner.nextInt();
+
 
         List<Employee> employees = new ArrayList<>();
 
@@ -40,7 +41,14 @@ public class EmployeeSalaryCalculation {
             employees.add(partTimeEmployee);
         }
 
-        System.out.println(" Total Salary: " + new EmployeeSalaryCalculation().salaryCalculation(employees));
+        return employees;
+
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println(" Total Salary: " + EmployeeSalaryCalculation.salaryCalculation(EmployeeSalaryCalculation.setEmployeeList()));
 
     }
 

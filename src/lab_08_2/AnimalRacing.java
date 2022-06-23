@@ -14,7 +14,7 @@ public class AnimalRacing {
         return winAnimal;
     }
 
-    public static void main(String[] args) {
+    public static List<Animal> setAnimalList() {
 
         int maxSpeed;
         String nameAnimal;
@@ -22,18 +22,23 @@ public class AnimalRacing {
         Animal horse = new Horse();
         Animal tiger = new Tiger();
         List<Animal> animalList = new ArrayList<>();
-        Animal animalWin = new Animal();
         animalList.add(dog);
         animalList.add(horse);
         animalList.add(tiger);
 
-        animalWin = new AnimalRacing().getAnimalWin(animalList);
         for (Animal animal : animalList) {
 
             System.out.printf("%s speed: %d\n", animal.getClass().getSimpleName(), animal.getSpeed());
 
         }
+        return animalList;
 
+    }
+
+    public static void main(String[] args) {
+
+        Animal animalWin = new Animal();
+        animalWin = new AnimalRacing().getAnimalWin(AnimalRacing.setAnimalList());
         System.out.printf("Winner is %s, with speed: %d Km/h", animalWin.getClass().getSimpleName(), animalWin.getSpeed());
 
 

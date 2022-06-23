@@ -1,20 +1,25 @@
-package lab_08_2;
+package lab_10;
+
+import lab_08_2.Animal;
+import lab_08_2.Dog;
+import lab_08_2.Horse;
+import lab_08_2.Tiger;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class AnimalRacingBonus {
+public class AnimalRacing {
 
-    public void getAnimalWin(List<Animal> animalList) {
+    public void getAnimalWin(List<lab_08_2.Animal> animalList) {
 
-        ArrayList<Animal> animalWinList = new ArrayList<>();
+        ArrayList<lab_08_2.Animal> animalWinList = new ArrayList<>();
         animalWinList.add(animalList.get(0));
 
         int maxSpeed;
         maxSpeed = animalList.get(0).getSpeed();
 
-        HashMap<Integer, ArrayList<Animal>> speedRecord = new HashMap<>();
+        HashMap<Integer, ArrayList<lab_08_2.Animal>> speedRecord = new HashMap<>();
         speedRecord.put(maxSpeed, animalWinList);
 
         for (int i = 1; i < animalList.size(); i++) {
@@ -43,23 +48,23 @@ public class AnimalRacingBonus {
 
         }
 
-        System.out.printf("The animals win with speed %d Km/h are %s.", animalWinList.get(0).getSpeed(), nameOfAnimalWinList);
+        System.out.printf("The animals win with speed %d Km/h is (are) %s.", animalWinList.get(0).getSpeed(), nameOfAnimalWinList);
 
     }
 
-    public static List<Animal> setAnimalList() {
+    public static List<lab_08_2.Animal> setAnimalList() {
 
         String nameAnimal;
-        Animal dog = new Dog();
-        Animal horse = new Horse();
-        Animal tiger = new Tiger();
+        lab_08_2.Animal dog = new Dog();
+        lab_08_2.Animal horse = new Horse();
+        lab_08_2.Animal tiger = new Tiger();
 
-        dog.setSpeed(9);
-        horse.setSpeed(30);
-        tiger.setSpeed(30);
+//        dog.setSpeed(9);
+//        horse.setSpeed(30);
+//        tiger.setSpeed(30);
 
-        List<Animal> animalList = new ArrayList<>();
-        List<Animal> animalWinList = new ArrayList<>();
+        List<lab_08_2.Animal> animalList = new ArrayList<>();
+        List<lab_08_2.Animal> animalWinList = new ArrayList<>();
 
         animalList.add(dog);
         animalList.add(horse);
@@ -76,7 +81,7 @@ public class AnimalRacingBonus {
 
     public static void main(String[] args) {
 
-        AnimalRacingBonus animalRacingBonus = new AnimalRacingBonus();
+        AnimalRacing animalRacingBonus = new AnimalRacing();
         animalRacingBonus.getAnimalWin(setAnimalList());
 
     }

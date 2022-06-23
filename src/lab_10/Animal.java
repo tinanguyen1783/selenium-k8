@@ -1,15 +1,15 @@
-package lab_08_2;
+package lab_10;
 
 import java.security.SecureRandom;
 
-public class Animal {
+public abstract class Animal {
 
     public int speed;
 
     public Animal() {
     }
 
-    public Animal(int speed) {
+    public Animal(int speed, String name) {
 
         this.speed = speed;
     }
@@ -23,8 +23,5 @@ public class Animal {
         this.speed = speed;
     }
 
-    public int speed() {
-
-        return new SecureRandom().nextInt(100);
-    }
+    public abstract int createSpeed();
 }
