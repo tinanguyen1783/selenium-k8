@@ -51,7 +51,7 @@ public class AnimalTest {
         Animal tiger = new Tiger();
 
         List<Animal> animalList = new ArrayList<>();
-        animalList=Arrays.asList(dog,horse,tiger);
+        animalList = Arrays.asList(dog, horse, tiger);
 
         for (Animal animal : animalList) {
 
