@@ -4,16 +4,16 @@ public class Animals {
 
     protected String name;
     protected int speed;
-    protected IFlyBehavior iFlyBehavior ;
+    protected IFlyBehavior iFlyBehavior;
     protected IRunBehavior iRunBehavior;
 
-    protected boolean performFly(){
-      return iFlyBehavior.flyable();
+    protected boolean performFly() {
+        return iFlyBehavior.flyable();
     }
 
-    protected int performRun(){
+    protected int performRun() {
 
-       return iRunBehavior.getSpeed();
+        return iRunBehavior.getSpeed();
     }
 
     public String getName() {

@@ -1,6 +1,6 @@
 package lab_12;
 
-public class Cat extends Animals{
+public class Cat extends Animals {
     public Cat() {
 
         iFlyBehavior = new WithoutWings();

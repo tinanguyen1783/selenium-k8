@@ -46,7 +46,7 @@ public class AnimalsRacing {
 
         for (Animals animals : animalWinList) {
 
-            System.out.print ( "  " + animals.name);
+            System.out.print("  " + animals.name);
 
         }
 

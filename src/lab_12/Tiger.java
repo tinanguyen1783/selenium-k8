@@ -1,6 +1,6 @@
 package lab_12;
 
-public class Tiger extends Animals{
+public class Tiger extends Animals {
 
     public Tiger() {
 
