@@ -34,7 +34,7 @@ public class AnimalsRacing {
             System.out.println(animalWithoutWingList.get(i).name + " " + currentspeed);
             if (currentspeed == speedAnimal) animalWinList.add(animalWithoutWingList.get(i));
             if (currentspeed > speedAnimal) {
-
+                speedAnimal = currentspeed;
                 animalWinList.clear();
                 animalWinList.add(animalWithoutWingList.get(i));
             }
